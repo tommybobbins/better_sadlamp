@@ -10,3 +10,8 @@
     git clone https://githust.com/tommybobbins/better_sadlamp
     sudo cp better_sadlamp/rc.local /etc/rc.local
     sudo reboot
+
+## Parse Data
+
+    cd better_sadlamp
+    python dump_colours.py >colours.txt 

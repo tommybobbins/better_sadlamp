@@ -19,4 +19,5 @@
 ## Results
 
 ![Sunshine RGB output](sunshine.png "RGB values of sunshine over time")
+![Sunshine RGB output](sunshine_22apr.png "RGB values of sunshine 22nd April 2019")
 

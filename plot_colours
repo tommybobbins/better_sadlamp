@@ -1,8 +1,8 @@
 set xlabel "Time"
 set ylabel "Intensity (Arbitrary units)"
-set title "RGB sunlight intensity over time"
+set title "RGB sunlight intensity over time 22nd April 2019"
 #set key left
-set output "sunshine.png"
+set output "sunshine_22apr.png"
 set term png
 
 #[ 2019/04/20 20:03:01 ] 0.0 0.0 0.0
@@ -11,7 +11,7 @@ set timefmt "\[ %Y/%m/%d %H:%M:%S \]"
 show timefmt
 set format x "%H:%M"
 #set format x "%Y/%m/%d\n%H:%M"
-set xrange [ "[ 2019/04/21 03:00:00 ] ":"[ 2019/04/23 16:00:00 ]"]
+set xrange [ "[ 2019/04/22 04:00:00 ] ":"[ 2019/04/22 21:00:00 ]"]
 #set xrange [ "[ 2019/04/22 03:00:00 ] ":"[ 2019/04/22 22:00:00 ]"]
 set term png font "arial,10
 set label "21-April-2019\nShade" at "[ 2019/04/21 12:00:00 ]",200 center

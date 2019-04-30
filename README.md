@@ -1,6 +1,6 @@
 # better_sadlamp
 
-  Write RGB colours to redis based on a Picamera colour sensor. This is being used to build a better daylight lamp.
+  Write RGB colours to redis based on a Picamera just measuring the colour. This is being used to build a better daylight lamp.
 
 ## Install
 

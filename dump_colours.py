@@ -10,5 +10,7 @@ for key in (r.keys('*')):
 
 for lastkey in sorted(allkeys.keys()):
     frmt_date = dt.datetime.utcfromtimestamp(float(lastkey)).strftime("[ %Y/%m/%d %H:%M:%S ]")
-    #sys.stdout.write(frmt_date)
-    print frmt_date , allkeys[ lastkey ]
+    red = allkeys[lastkey][0]
+    green = allkeys[lastkey][1]
+    blue = allkeys[lastkey][2]
+    print ("%s %s %s %s" % (frmt_date,red,green,blue))

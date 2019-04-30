@@ -15,3 +15,8 @@
 
     cd better_sadlamp
     python dump_colours.py >colours.txt 
+
+## Results
+
+![Sunshine RGB output](sunshine.png "RGB values of sunshine over time")
+

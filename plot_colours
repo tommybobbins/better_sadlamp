@@ -1,0 +1,38 @@
+set xlabel "Time"
+set ylabel "Intensity (Arbitrary units)"
+set title "RGB sunlight intensity over time"
+#set key left
+set output "sunshine.png"
+set term png
+
+#[ 2019/04/20 20:03:01 ] 0.0 0.0 0.0
+set xdata time
+set timefmt "\[ %Y/%m/%d %H:%M:%S \]"
+show timefmt
+set format x "%H:%M"
+#set format x "%Y/%m/%d\n%H:%M"
+set xrange [ "[ 2019/04/21 03:00:00 ] ":"[ 2019/04/23 16:00:00 ]"]
+#set xrange [ "[ 2019/04/22 03:00:00 ] ":"[ 2019/04/22 22:00:00 ]"]
+set term png font "arial,10
+set label "21-April-2019\nShade" at "[ 2019/04/21 12:00:00 ]",200 center
+set label "22-April-2019\nSunshine" at "[ 2019/04/22 12:00:00 ]",220 center
+set label "23-April-2019\nSunshine" at "[ 2019/04/23 10:00:00 ]",200 center
+#plot [][0:256]"colours.txt" using 1:5 smooth csplines title "Red" lt 4, \
+#     "colours.txt" using 1:6 smooth csplines title "Green", \
+#     "colours.txt" using 1:7 smooth csplines title "Blue"
+plot [][0:256]"colours.txt" using 1:5 smooth unique title "Red" lt 4, \
+     "colours.txt" using 1:6  smooth unique title "Green", \
+     "colours.txt" using 1:7 smooth unique title "Blue"
+
+
+
+#plot [0:2500000][0:10000] \
+#     'find_delete_aws.txt' using 1:5 smooth csplines \
+#      title "AWS:find" , \
+#     'find_delete_aws.txt' using 1:5 notitle with points, \
+#     'rsync_empty_aws.txt' using 1:5 smooth csplines \
+#      title "AWS:rsync" , \
+#     'rsync_empty_aws.txt' using 1:5 notitle with points, \
+#     'unlink_perl_aws.txt' using 1:5 smooth csplines \
+#      title "AWS:Perl", \
+#     'unlink_perl_aws.txt' using 1:5 notitle with points

@@ -13,4 +13,7 @@ for lastkey in sorted(allkeys.keys()):
     red = allkeys[lastkey][0]
     green = allkeys[lastkey][1]
     blue = allkeys[lastkey][2]
+    # Epoch Time stamped data
+#    print ("%s %s %s %s" % (float(lastkey),red,green,blue))
+    # Date stamped data
     print ("%s %s %s %s" % (frmt_date,red,green,blue))

@@ -11,7 +11,7 @@ https://shop.pimoroni.com/products/raspberry-pi-zero-camera-module?variant=37751
     sudo apt-get -y install python-picamera
     sudo apt-get -y install python-redis redis-server
     sudo systemctl enable redis; sudo systemctl start redis
-    git clone https://githust.com/tommybobbins/better_sadlamp
+    git clone https://github.com/tommybobbins/better_sadlamp
     sudo cp better_sadlamp/rc.local /etc/rc.local
     sudo reboot
 

@@ -64,3 +64,4 @@ plot [1555900832:1.55598E+9][0:500] gaussr(x) lt rgb "red", "colours_ts22.txt" u
 
 #plot [1555900832:1.55598E+9][0:500] gaussr(x) lt rgb "red", "colours_ts22.txt" using 1:2 lt rgb "red"
 #plot [1555900832:1.55598E+9][0:500] gaussr(x) lt rgb "red"
+#1555934400.0 is midday on 22nd April 2019

@@ -5,12 +5,14 @@ now = datetime.datetime.now()
 midnight = now.replace(hour=0, minute=0, second=0, microsecond=0)
 midday = now.replace(hour=12, minute=0, second=0, microsecond=0)
 seconds = (now - midnight).seconds
-midday_seconds = (now - midday).seconds 
-print seconds
-print midday_seconds
-#x = seconds - midday_seconds
-x = midday_seconds
-print x
+#midday_seconds = (now - midday).seconds 
+#43200 seconds till midday
+midday_seconds=43200
+#print seconds
+#print midday_seconds
+x = seconds - midday_seconds
+#x = midday_seconds
+print ("Number of seconds to (-ve) /from (+ve) midday: %i" % x )
 
 offset=1555934400.0
 
@@ -37,9 +39,9 @@ amplitudebb=12000000.0
 positionbb=3600.00
 sigmabb=15000.0
 
-print positionra, positionrb
-print positionga, positiongb
-print positionba, positionbb
+#print positionra, positionrb
+#print positionga, positiongb
+#print positionba, positionbb
 
 
 #FIT_LIMIT = 1e-6
@@ -47,7 +49,8 @@ gaussr=amplitudera/(sigmara*sqrt(2.*pi))*exp(-(x-positionra)**2/(2.*sigmara**2))
 gaussg=amplitudega/(sigmaga*sqrt(2.*pi))*exp(-(x-positionga)**2/(2.*sigmaga**2)) - amplitudegb/(sigmagb*sqrt(2.*pi))*exp(-(x-positiongb)**2/(2.*sigmagb**2)) 
 gaussb=amplitudeba/(sigmaba*sqrt(2.*pi))*exp(-(x-positionba)**2/(2.*sigmaba**2)) - amplitudebb/(sigmabb*sqrt(2.*pi))*exp(-(x-positionbb)**2/(2.*sigmabb**2)) 
 
-print gaussr, gaussg, gaussb
+print ("R\t\tG\t\tB")
+print ("%f\t%f\t%f" % (gaussr, gaussg, gaussb))
 
 
 #43200 seconds till midday

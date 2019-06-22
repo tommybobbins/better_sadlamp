@@ -2,7 +2,7 @@ set xlabel "Time"
 set ylabel "Intensity (Arbitrary units)"
 set title "RGB sunlight intensity over time 22nd April 2019"
 #set key left
-set key font ",6"
+set key font ",7"
 
 set output "gauss.png"
 set term png font "arial,10

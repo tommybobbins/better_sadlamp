@@ -578,3 +578,531 @@ sigmaba         0.016  0.016  1.000
 amplitudebb    -0.070 -0.070  0.014  1.000 
 positionbb     -0.070 -0.070  0.014  1.000  1.000 
 sigmabb         0.033  0.033  0.781  0.016  0.016  1.000 
+
+
+*******************************************************************************
+Sat Jun 22 01:54:45 2019
+
+
+FIT:    data read from 'colours_ts22.txt' using 1:2
+        format = x:z
+        #datapoints = 976
+        residuals are weighted equally (unit weight)
+
+function used for fitting: gaussr(x)
+	gaussr(x)=amplitudera/(sigmara*sqrt(2.*pi))*exp(-(x-positionra)**2/(2.*sigmara**2)) - amplituderb/(sigmarb*sqrt(2.*pi))*exp(-(x-positionrb)**2/(2.*sigmarb**2))
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   amplitudera   positionra    sigmara       amplituderb   positionrb    sigmarb      
+   0 4.7501535947e+05   0.00e+00  6.48e+04    1.000000e+07   1.555933e+09   1.950000e+04   2.000000e+06   1.555932e+09   1.050000e+04
+   6 4.2645292580e+05   0.00e+00  6.48e+11    1.000000e+07   1.555934e+09   1.950000e+04   2.000000e+06   1.555932e+09   1.050000e+04
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 426453
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 970
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 20.9676
+variance of residuals (reduced chisquare) = WSSR/ndf   : 439.642
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+amplitudera     = 1e+07            +/- 6.121e+17    (6.121e+12%)
+positionra      = 1.55593e+09      +/- 9.523e+16    (6.121e+09%)
+sigmara         = 19500            +/- 421.7        (2.162%)
+amplituderb     = 2e+06            +/- 1.51e+17     (7.551e+12%)
+positionrb      = 1.55593e+09      +/- 1.175e+17    (7.551e+09%)
+sigmarb         = 10500            +/- 595          (5.666%)
+
+correlation matrix of the fit parameters:
+                amplit positi sigmar amplit positi sigmar 
+amplitudera     1.000 
+positionra      1.000  1.000 
+sigmara         0.032  0.032  1.000 
+amplituderb    -0.201 -0.201 -0.021  1.000 
+positionrb     -0.201 -0.201 -0.021  1.000  1.000 
+sigmarb        -0.038 -0.038 -0.377 -0.007 -0.007  1.000 
+
+
+*******************************************************************************
+Sat Jun 22 01:54:45 2019
+
+
+FIT:    data read from 'colours_ts22.txt' using 1:3
+        format = x:z
+        #datapoints = 976
+        residuals are weighted equally (unit weight)
+
+function used for fitting: gaussg(x)
+	gaussg(x)=amplitudega/(sigmaga*sqrt(2.*pi))*exp(-(x-positionga)**2/(2.*sigmaga**2)) - amplitudegb/(sigmagb*sqrt(2.*pi))*exp(-(x-positiongb)**2/(2.*sigmagb**2))
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   amplitudega   positionga    sigmaga       amplitudegb   positiongb    sigmagb      
+   0 7.0156181318e+05   0.00e+00  9.79e+04    1.450000e+07   1.555935e+09   1.925000e+04   4.000000e+06   1.555935e+09   1.025000e+04
+   1 7.0156181318e+05   0.00e+00  9.79e+11    1.450000e+07   1.555935e+09   1.925000e+04   4.000000e+06   1.555935e+09   1.025000e+04
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 701562
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 970
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 26.8935
+variance of residuals (reduced chisquare) = WSSR/ndf   : 723.26
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+amplitudega     = 1.45e+07         +/- 7.236e+17    (4.991e+12%)
+positionga      = 1.55594e+09      +/- 7.765e+16    (4.991e+09%)
+sigmaga         = 19250            +/- 1786         (9.28%)
+amplitudegb     = 4e+06            +/- 3.067e+17    (7.667e+12%)
+positiongb      = 1.55594e+09      +/- 1.193e+17    (7.667e+09%)
+sigmagb         = 10250            +/- 1466         (14.3%)
+
+correlation matrix of the fit parameters:
+                amplit positi sigmag amplit positi sigmag 
+amplitudega     1.000 
+positionga      1.000  1.000 
+sigmaga         0.005  0.005  1.000 
+amplitudegb    -0.214 -0.214  0.012  1.000 
+positiongb     -0.214 -0.214  0.012  1.000  1.000 
+sigmagb        -0.004 -0.004 -0.966  0.001  0.001  1.000 
+
+
+*******************************************************************************
+Sat Jun 22 01:54:45 2019
+
+
+FIT:    data read from 'colours_ts22.txt' using 1:4
+        format = x:z
+        #datapoints = 976
+        residuals are weighted equally (unit weight)
+
+function used for fitting: gaussb(x)
+	gaussb(x)=amplitudeba/(sigmaba*sqrt(2.*pi))*exp(-(x-positionba)**2/(2.*sigmaba**2)) - amplitudebb/(sigmabb*sqrt(2.*pi))*exp(-(x-positionbb)**2/(2.*sigmabb**2))
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   amplitudeba   positionba    sigmaba       amplitudebb   positionbb    sigmabb      
+   0 1.2852727767e+06   0.00e+00  1.67e+05    2.250000e+07   1.555938e+09   1.900000e+04   1.200000e+07   1.555938e+09   1.500000e+04
+   2 1.0715013273e+06  -1.69e-07  1.67e+11    2.250000e+07   1.555937e+09   1.900000e+04   1.200000e+07   1.555938e+09   1.500000e+04
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 1.0715e+06
+rel. change during last iteration : -1.69011e-12
+
+degrees of freedom    (FIT_NDF)                        : 970
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 33.2361
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1104.64
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+amplitudeba     = 2.25e+07         +/- 1.159e+18    (5.152e+12%)
+positionba      = 1.55594e+09      +/- 8.016e+16    (5.152e+09%)
+sigmaba         = 19000            +/- 473.5        (2.492%)
+amplitudebb     = 1.2e+07          +/- 8.021e+17    (6.684e+12%)
+positionbb      = 1.55594e+09      +/- 1.04e+17     (6.684e+09%)
+sigmabb         = 15000            +/- 617.7        (4.118%)
+
+correlation matrix of the fit parameters:
+                amplit positi sigmab amplit positi sigmab 
+amplitudeba     1.000 
+positionba      1.000  1.000 
+sigmaba         0.016  0.016  1.000 
+amplitudebb    -0.070 -0.070  0.014  1.000 
+positionbb     -0.070 -0.070  0.014  1.000  1.000 
+sigmabb         0.033  0.033  0.781  0.016  0.016  1.000 
+
+
+*******************************************************************************
+Sat Jun 22 01:55:20 2019
+
+
+FIT:    data read from 'colours_ts22.txt' using 1:2
+        format = x:z
+        #datapoints = 976
+        residuals are weighted equally (unit weight)
+
+function used for fitting: gaussr(x)
+	gaussr(x)=amplitudera/(sigmara*sqrt(2.*pi))*exp(-(x-positionra)**2/(2.*sigmara**2)) - amplituderb/(sigmarb*sqrt(2.*pi))*exp(-(x-positionrb)**2/(2.*sigmarb**2))
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   amplitudera   positionra    sigmara       amplituderb   positionrb    sigmarb      
+   0 4.7501535947e+05   0.00e+00  6.48e+04    1.000000e+07   1.555933e+09   1.950000e+04   2.000000e+06   1.555932e+09   1.050000e+04
+   6 4.2645292580e+05   0.00e+00  6.48e+11    1.000000e+07   1.555934e+09   1.950000e+04   2.000000e+06   1.555932e+09   1.050000e+04
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 426453
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 970
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 20.9676
+variance of residuals (reduced chisquare) = WSSR/ndf   : 439.642
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+amplitudera     = 1e+07            +/- 6.121e+17    (6.121e+12%)
+positionra      = 1.55593e+09      +/- 9.523e+16    (6.121e+09%)
+sigmara         = 19500            +/- 421.7        (2.162%)
+amplituderb     = 2e+06            +/- 1.51e+17     (7.551e+12%)
+positionrb      = 1.55593e+09      +/- 1.175e+17    (7.551e+09%)
+sigmarb         = 10500            +/- 595          (5.666%)
+
+correlation matrix of the fit parameters:
+                amplit positi sigmar amplit positi sigmar 
+amplitudera     1.000 
+positionra      1.000  1.000 
+sigmara         0.032  0.032  1.000 
+amplituderb    -0.201 -0.201 -0.021  1.000 
+positionrb     -0.201 -0.201 -0.021  1.000  1.000 
+sigmarb        -0.038 -0.038 -0.377 -0.007 -0.007  1.000 
+
+
+*******************************************************************************
+Sat Jun 22 01:55:20 2019
+
+
+FIT:    data read from 'colours_ts22.txt' using 1:3
+        format = x:z
+        #datapoints = 976
+        residuals are weighted equally (unit weight)
+
+function used for fitting: gaussg(x)
+	gaussg(x)=amplitudega/(sigmaga*sqrt(2.*pi))*exp(-(x-positionga)**2/(2.*sigmaga**2)) - amplitudegb/(sigmagb*sqrt(2.*pi))*exp(-(x-positiongb)**2/(2.*sigmagb**2))
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   amplitudega   positionga    sigmaga       amplitudegb   positiongb    sigmagb      
+   0 7.0156181318e+05   0.00e+00  9.79e+04    1.450000e+07   1.555935e+09   1.925000e+04   4.000000e+06   1.555935e+09   1.025000e+04
+   1 7.0156181318e+05   0.00e+00  9.79e+11    1.450000e+07   1.555935e+09   1.925000e+04   4.000000e+06   1.555935e+09   1.025000e+04
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 701562
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 970
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 26.8935
+variance of residuals (reduced chisquare) = WSSR/ndf   : 723.26
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+amplitudega     = 1.45e+07         +/- 7.236e+17    (4.991e+12%)
+positionga      = 1.55594e+09      +/- 7.765e+16    (4.991e+09%)
+sigmaga         = 19250            +/- 1786         (9.28%)
+amplitudegb     = 4e+06            +/- 3.067e+17    (7.667e+12%)
+positiongb      = 1.55594e+09      +/- 1.193e+17    (7.667e+09%)
+sigmagb         = 10250            +/- 1466         (14.3%)
+
+correlation matrix of the fit parameters:
+                amplit positi sigmag amplit positi sigmag 
+amplitudega     1.000 
+positionga      1.000  1.000 
+sigmaga         0.005  0.005  1.000 
+amplitudegb    -0.214 -0.214  0.012  1.000 
+positiongb     -0.214 -0.214  0.012  1.000  1.000 
+sigmagb        -0.004 -0.004 -0.966  0.001  0.001  1.000 
+
+
+*******************************************************************************
+Sat Jun 22 01:55:21 2019
+
+
+FIT:    data read from 'colours_ts22.txt' using 1:4
+        format = x:z
+        #datapoints = 976
+        residuals are weighted equally (unit weight)
+
+function used for fitting: gaussb(x)
+	gaussb(x)=amplitudeba/(sigmaba*sqrt(2.*pi))*exp(-(x-positionba)**2/(2.*sigmaba**2)) - amplitudebb/(sigmabb*sqrt(2.*pi))*exp(-(x-positionbb)**2/(2.*sigmabb**2))
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   amplitudeba   positionba    sigmaba       amplitudebb   positionbb    sigmabb      
+   0 1.2852727767e+06   0.00e+00  1.67e+05    2.250000e+07   1.555938e+09   1.900000e+04   1.200000e+07   1.555938e+09   1.500000e+04
+   2 1.0715013273e+06  -1.69e-07  1.67e+11    2.250000e+07   1.555937e+09   1.900000e+04   1.200000e+07   1.555938e+09   1.500000e+04
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 1.0715e+06
+rel. change during last iteration : -1.69011e-12
+
+degrees of freedom    (FIT_NDF)                        : 970
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 33.2361
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1104.64
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+amplitudeba     = 2.25e+07         +/- 1.159e+18    (5.152e+12%)
+positionba      = 1.55594e+09      +/- 8.016e+16    (5.152e+09%)
+sigmaba         = 19000            +/- 473.5        (2.492%)
+amplitudebb     = 1.2e+07          +/- 8.021e+17    (6.684e+12%)
+positionbb      = 1.55594e+09      +/- 1.04e+17     (6.684e+09%)
+sigmabb         = 15000            +/- 617.7        (4.118%)
+
+correlation matrix of the fit parameters:
+                amplit positi sigmab amplit positi sigmab 
+amplitudeba     1.000 
+positionba      1.000  1.000 
+sigmaba         0.016  0.016  1.000 
+amplitudebb    -0.070 -0.070  0.014  1.000 
+positionbb     -0.070 -0.070  0.014  1.000  1.000 
+sigmabb         0.033  0.033  0.781  0.016  0.016  1.000 
+
+
+*******************************************************************************
+Sat Jun 22 01:55:40 2019
+
+
+FIT:    data read from 'colours_ts22.txt' using 1:2
+        format = x:z
+        #datapoints = 976
+        residuals are weighted equally (unit weight)
+
+function used for fitting: gaussr(x)
+	gaussr(x)=amplitudera/(sigmara*sqrt(2.*pi))*exp(-(x-positionra)**2/(2.*sigmara**2)) - amplituderb/(sigmarb*sqrt(2.*pi))*exp(-(x-positionrb)**2/(2.*sigmarb**2))
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   amplitudera   positionra    sigmara       amplituderb   positionrb    sigmarb      
+   0 4.7501535947e+05   0.00e+00  6.48e+04    1.000000e+07   1.555933e+09   1.950000e+04   2.000000e+06   1.555932e+09   1.050000e+04
+   6 4.2645292580e+05   0.00e+00  6.48e+11    1.000000e+07   1.555934e+09   1.950000e+04   2.000000e+06   1.555932e+09   1.050000e+04
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 426453
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 970
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 20.9676
+variance of residuals (reduced chisquare) = WSSR/ndf   : 439.642
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+amplitudera     = 1e+07            +/- 6.121e+17    (6.121e+12%)
+positionra      = 1.55593e+09      +/- 9.523e+16    (6.121e+09%)
+sigmara         = 19500            +/- 421.7        (2.162%)
+amplituderb     = 2e+06            +/- 1.51e+17     (7.551e+12%)
+positionrb      = 1.55593e+09      +/- 1.175e+17    (7.551e+09%)
+sigmarb         = 10500            +/- 595          (5.666%)
+
+correlation matrix of the fit parameters:
+                amplit positi sigmar amplit positi sigmar 
+amplitudera     1.000 
+positionra      1.000  1.000 
+sigmara         0.032  0.032  1.000 
+amplituderb    -0.201 -0.201 -0.021  1.000 
+positionrb     -0.201 -0.201 -0.021  1.000  1.000 
+sigmarb        -0.038 -0.038 -0.377 -0.007 -0.007  1.000 
+
+
+*******************************************************************************
+Sat Jun 22 01:55:40 2019
+
+
+FIT:    data read from 'colours_ts22.txt' using 1:3
+        format = x:z
+        #datapoints = 976
+        residuals are weighted equally (unit weight)
+
+function used for fitting: gaussg(x)
+	gaussg(x)=amplitudega/(sigmaga*sqrt(2.*pi))*exp(-(x-positionga)**2/(2.*sigmaga**2)) - amplitudegb/(sigmagb*sqrt(2.*pi))*exp(-(x-positiongb)**2/(2.*sigmagb**2))
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   amplitudega   positionga    sigmaga       amplitudegb   positiongb    sigmagb      
+   0 7.0156181318e+05   0.00e+00  9.79e+04    1.450000e+07   1.555935e+09   1.925000e+04   4.000000e+06   1.555935e+09   1.025000e+04
+   1 7.0156181318e+05   0.00e+00  9.79e+11    1.450000e+07   1.555935e+09   1.925000e+04   4.000000e+06   1.555935e+09   1.025000e+04
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 701562
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 970
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 26.8935
+variance of residuals (reduced chisquare) = WSSR/ndf   : 723.26
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+amplitudega     = 1.45e+07         +/- 7.236e+17    (4.991e+12%)
+positionga      = 1.55594e+09      +/- 7.765e+16    (4.991e+09%)
+sigmaga         = 19250            +/- 1786         (9.28%)
+amplitudegb     = 4e+06            +/- 3.067e+17    (7.667e+12%)
+positiongb      = 1.55594e+09      +/- 1.193e+17    (7.667e+09%)
+sigmagb         = 10250            +/- 1466         (14.3%)
+
+correlation matrix of the fit parameters:
+                amplit positi sigmag amplit positi sigmag 
+amplitudega     1.000 
+positionga      1.000  1.000 
+sigmaga         0.005  0.005  1.000 
+amplitudegb    -0.214 -0.214  0.012  1.000 
+positiongb     -0.214 -0.214  0.012  1.000  1.000 
+sigmagb        -0.004 -0.004 -0.966  0.001  0.001  1.000 
+
+
+*******************************************************************************
+Sat Jun 22 01:55:40 2019
+
+
+FIT:    data read from 'colours_ts22.txt' using 1:4
+        format = x:z
+        #datapoints = 976
+        residuals are weighted equally (unit weight)
+
+function used for fitting: gaussb(x)
+	gaussb(x)=amplitudeba/(sigmaba*sqrt(2.*pi))*exp(-(x-positionba)**2/(2.*sigmaba**2)) - amplitudebb/(sigmabb*sqrt(2.*pi))*exp(-(x-positionbb)**2/(2.*sigmabb**2))
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   amplitudeba   positionba    sigmaba       amplitudebb   positionbb    sigmabb      
+   0 1.2852727767e+06   0.00e+00  1.67e+05    2.250000e+07   1.555938e+09   1.900000e+04   1.200000e+07   1.555938e+09   1.500000e+04
+   2 1.0715013273e+06  -1.69e-07  1.67e+11    2.250000e+07   1.555937e+09   1.900000e+04   1.200000e+07   1.555938e+09   1.500000e+04
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 1.0715e+06
+rel. change during last iteration : -1.69011e-12
+
+degrees of freedom    (FIT_NDF)                        : 970
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 33.2361
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1104.64
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+amplitudeba     = 2.25e+07         +/- 1.159e+18    (5.152e+12%)
+positionba      = 1.55594e+09      +/- 8.016e+16    (5.152e+09%)
+sigmaba         = 19000            +/- 473.5        (2.492%)
+amplitudebb     = 1.2e+07          +/- 8.021e+17    (6.684e+12%)
+positionbb      = 1.55594e+09      +/- 1.04e+17     (6.684e+09%)
+sigmabb         = 15000            +/- 617.7        (4.118%)
+
+correlation matrix of the fit parameters:
+                amplit positi sigmab amplit positi sigmab 
+amplitudeba     1.000 
+positionba      1.000  1.000 
+sigmaba         0.016  0.016  1.000 
+amplitudebb    -0.070 -0.070  0.014  1.000 
+positionbb     -0.070 -0.070  0.014  1.000  1.000 
+sigmabb         0.033  0.033  0.781  0.016  0.016  1.000 
+
+
+*******************************************************************************
+Sat Jun 22 01:55:56 2019
+
+
+FIT:    data read from 'colours_ts22.txt' using 1:2
+        format = x:z
+        #datapoints = 976
+        residuals are weighted equally (unit weight)
+
+function used for fitting: gaussr(x)
+	gaussr(x)=amplitudera/(sigmara*sqrt(2.*pi))*exp(-(x-positionra)**2/(2.*sigmara**2)) - amplituderb/(sigmarb*sqrt(2.*pi))*exp(-(x-positionrb)**2/(2.*sigmarb**2))
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   amplitudera   positionra    sigmara       amplituderb   positionrb    sigmarb      
+   0 4.7501535947e+05   0.00e+00  6.48e+04    1.000000e+07   1.555933e+09   1.950000e+04   2.000000e+06   1.555932e+09   1.050000e+04
+   6 4.2645292580e+05   0.00e+00  6.48e+11    1.000000e+07   1.555934e+09   1.950000e+04   2.000000e+06   1.555932e+09   1.050000e+04
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 426453
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 970
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 20.9676
+variance of residuals (reduced chisquare) = WSSR/ndf   : 439.642
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+amplitudera     = 1e+07            +/- 6.121e+17    (6.121e+12%)
+positionra      = 1.55593e+09      +/- 9.523e+16    (6.121e+09%)
+sigmara         = 19500            +/- 421.7        (2.162%)
+amplituderb     = 2e+06            +/- 1.51e+17     (7.551e+12%)
+positionrb      = 1.55593e+09      +/- 1.175e+17    (7.551e+09%)
+sigmarb         = 10500            +/- 595          (5.666%)
+
+correlation matrix of the fit parameters:
+                amplit positi sigmar amplit positi sigmar 
+amplitudera     1.000 
+positionra      1.000  1.000 
+sigmara         0.032  0.032  1.000 
+amplituderb    -0.201 -0.201 -0.021  1.000 
+positionrb     -0.201 -0.201 -0.021  1.000  1.000 
+sigmarb        -0.038 -0.038 -0.377 -0.007 -0.007  1.000 
+
+
+*******************************************************************************
+Sat Jun 22 01:55:56 2019
+
+
+FIT:    data read from 'colours_ts22.txt' using 1:3
+        format = x:z
+        #datapoints = 976
+        residuals are weighted equally (unit weight)
+
+function used for fitting: gaussg(x)
+	gaussg(x)=amplitudega/(sigmaga*sqrt(2.*pi))*exp(-(x-positionga)**2/(2.*sigmaga**2)) - amplitudegb/(sigmagb*sqrt(2.*pi))*exp(-(x-positiongb)**2/(2.*sigmagb**2))
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   amplitudega   positionga    sigmaga       amplitudegb   positiongb    sigmagb      
+   0 7.0156181318e+05   0.00e+00  9.79e+04    1.450000e+07   1.555935e+09   1.925000e+04   4.000000e+06   1.555935e+09   1.025000e+04
+   1 7.0156181318e+05   0.00e+00  9.79e+11    1.450000e+07   1.555935e+09   1.925000e+04   4.000000e+06   1.555935e+09   1.025000e+04
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 701562
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 970
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 26.8935
+variance of residuals (reduced chisquare) = WSSR/ndf   : 723.26
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+amplitudega     = 1.45e+07         +/- 7.236e+17    (4.991e+12%)
+positionga      = 1.55594e+09      +/- 7.765e+16    (4.991e+09%)
+sigmaga         = 19250            +/- 1786         (9.28%)
+amplitudegb     = 4e+06            +/- 3.067e+17    (7.667e+12%)
+positiongb      = 1.55594e+09      +/- 1.193e+17    (7.667e+09%)
+sigmagb         = 10250            +/- 1466         (14.3%)
+
+correlation matrix of the fit parameters:
+                amplit positi sigmag amplit positi sigmag 
+amplitudega     1.000 
+positionga      1.000  1.000 
+sigmaga         0.005  0.005  1.000 
+amplitudegb    -0.214 -0.214  0.012  1.000 
+positiongb     -0.214 -0.214  0.012  1.000  1.000 
+sigmagb        -0.004 -0.004 -0.966  0.001  0.001  1.000 
+
+
+*******************************************************************************
+Sat Jun 22 01:55:56 2019
+
+
+FIT:    data read from 'colours_ts22.txt' using 1:4
+        format = x:z
+        #datapoints = 976
+        residuals are weighted equally (unit weight)
+
+function used for fitting: gaussb(x)
+	gaussb(x)=amplitudeba/(sigmaba*sqrt(2.*pi))*exp(-(x-positionba)**2/(2.*sigmaba**2)) - amplitudebb/(sigmabb*sqrt(2.*pi))*exp(-(x-positionbb)**2/(2.*sigmabb**2))
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   amplitudeba   positionba    sigmaba       amplitudebb   positionbb    sigmabb      
+   0 1.2852727767e+06   0.00e+00  1.67e+05    2.250000e+07   1.555938e+09   1.900000e+04   1.200000e+07   1.555938e+09   1.500000e+04
+   2 1.0715013273e+06  -1.69e-07  1.67e+11    2.250000e+07   1.555937e+09   1.900000e+04   1.200000e+07   1.555938e+09   1.500000e+04
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 1.0715e+06
+rel. change during last iteration : -1.69011e-12
+
+degrees of freedom    (FIT_NDF)                        : 970
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 33.2361
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1104.64
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+amplitudeba     = 2.25e+07         +/- 1.159e+18    (5.152e+12%)
+positionba      = 1.55594e+09      +/- 8.016e+16    (5.152e+09%)
+sigmaba         = 19000            +/- 473.5        (2.492%)
+amplitudebb     = 1.2e+07          +/- 8.021e+17    (6.684e+12%)
+positionbb      = 1.55594e+09      +/- 1.04e+17     (6.684e+09%)
+sigmabb         = 15000            +/- 617.7        (4.118%)
+
+correlation matrix of the fit parameters:
+                amplit positi sigmab amplit positi sigmab 
+amplitudeba     1.000 
+positionba      1.000  1.000 
+sigmaba         0.016  0.016  1.000 
+amplitudebb    -0.070 -0.070  0.014  1.000 
+positionbb     -0.070 -0.070  0.014  1.000  1.000 
+sigmabb         0.033  0.033  0.781  0.016  0.016  1.000 

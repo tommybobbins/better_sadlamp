@@ -22,8 +22,9 @@ https://shop.pimoroni.com/products/raspberry-pi-zero-camera-module?variant=37751
 
 ## Results
 
-Sunshine colour composition 22nd-April-2019 at 53°19"N 2°01'"W. Location was chosen to be away from all street lights. The days were chosen as the skies were cloudless.
+Sunshine colour composition 22nd-April-2019 at 53°19"N 2°01'"W. Location was chosen to be away from all street lights. The days were chosen as the skies were cloudless. The sunshine profile does not fit to a Guassian, but has a flat top. I've modelled this using a Gaussian with an inverted Gaussian. 
 
 ![Sunshine RGB output](sunshine.png "RGB values of sunshine over time")
 ![Sunshine RGB output](sunshine_22apr.png "RGB values of sunshine 22nd April 2019")
+![Gaussian fit to RGB output](gauss.png "Gaussian fit to 22nd April 2019 with inverted Gaussian for dampening RGB")
 

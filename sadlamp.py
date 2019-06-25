@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
-from datetime import datetime, date
+#from datetime import datetime, date
+import time
+import datetime
 from time import sleep
 import unicornhat as unicorn
 #import datetime
@@ -10,7 +12,7 @@ now = datetime.datetime.now()
 midnight = now.replace(hour=0, minute=0, second=0, microsecond=0)
 seconds = (now - midnight).seconds
 #43200 seconds till midday
-#midday_seconds=43200
+#midday_seconds=70000
 midday_seconds=43200
 #print seconds
 x = seconds - midday_seconds

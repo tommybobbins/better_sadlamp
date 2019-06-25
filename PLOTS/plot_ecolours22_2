@@ -1,0 +1,74 @@
+set xlabel "Time"
+set ylabel "Intensity (Arbitrary units)"
+set title "Modelled RGB light intensity over time fitted to 22nd April 2019"
+#set key left
+set key font ",7"
+
+set output "epoch_gauss_2_sine.png"
+set term png font "arial,10
+
+#[ 2019/04/20 20:03:01 ] 0.0 0.0 0.0
+#set xdata time
+#set timefmt "\[ %Y/%m/%d %H:%M:%S \]"
+#show timefmt
+#set format x "%H:%M"
+#set format x "%Y/%m/%d\n%H:%M"
+#set xrange [ "[ 2019/04/22 04:00:00 ] ":"[ 2019/04/22 21:00:00 ]"]
+#set xrange [ "[ 2019/04/22 03:00:00 ] ":"[ 2019/04/22 22:00:00 ]"]
+#set label "21-April-2019\nShade" at "[ 2019/04/21 12:00:00 ]",200 center
+#set label "22-April-2019\nSunshine" at "[ 2019/04/22 12:00:00 ]",220 center
+#set label "23-April-2019\nSunshine" at "[ 2019/04/23 10:00:00 ]",200 center
+#plot [][0:256]"colours.txt" using 1:5 smooth csplines title "Red" lt 4, \
+#     "colours.txt" using 1:6 smooth csplines title "Green", \
+#     "colours.txt" using 1:7 smooth csplines title "Blue"
+#plot "colours_ts22.txt" using 1:2 smooth unique title "Red" lt 4, \
+#     "colours_ts22.txt" using 1:3  smooth unique title "Green", \
+#     "colours_ts22.txt" using 1:4 smooth unique title "Blue"
+
+pi=3.141592654
+
+amplitudera     = 2.45678e+07
+positionra      = -363.766  
+sigmara         = 14825.9  
+amplituderb     = 1.74477e+07
+positionrb      = -684.155  
+sigmarb         = 12943.2  
+
+amplitudega     = 3.76981e+07
+positionga      = -277.371  
+sigmaga         = 14211.4  
+amplitudegb     = 2.85476e+07 
+positiongb      = -343.741   
+sigmagb         = 12556     
+
+amplitudeba     = 5.8726e+07
+positionba      = -95.8113  
+sigmaba         = 13539   
+amplitudebb     = 4.92709e+07
+positionbb      = -0.22518  
+sigmabb         = 12286.9  
+
+
+#FIT_LIMIT = 1e-6
+gaussr(x)=amplitudera/(sigmara*sqrt(2.*pi))*exp(-(x-positionra)**2/(2.*sigmara**2)) - amplituderb/(sigmarb*sqrt(2.*pi))*exp(-(x-positionrb)**2/(2.*sigmarb**2)) 
+gaussg(x)=amplitudega/(sigmaga*sqrt(2.*pi))*exp(-(x-positionga)**2/(2.*sigmaga**2)) - amplitudegb/(sigmagb*sqrt(2.*pi))*exp(-(x-positiongb)**2/(2.*sigmagb**2)) 
+gaussb(x)=amplitudeba/(sigmaba*sqrt(2.*pi))*exp(-(x-positionba)**2/(2.*sigmaba**2)) - amplitudebb/(sigmabb*sqrt(2.*pi))*exp(-(x-positionbb)**2/(2.*sigmabb**2)) 
+#gaussr(x)=amplitudera/(sigmara*sqrt(2.*pi))*exp(-(x-positionra)**2/(2.*sigmara**2))
+#gaussg(x)=amplitudega/(sigmaga*sqrt(2.*pi))*exp(-(x-positionga)**2/(2.*sigmaga**2))
+#gaussb(x)=amplitudeba/(sigmaba*sqrt(2.*pi))*exp(-(x-positionba)**2/(2.*sigmaba**2))
+#fit it to the data, 
+fit gaussr(x) 'colours_ets22.txt' using 1:2 via amplitudera, positionra, sigmara, amplituderb, positionrb, sigmarb
+fit gaussg(x) 'colours_ets22.txt' using 1:3 via amplitudega, positionga, sigmaga, amplitudegb, positiongb, sigmagb
+fit gaussb(x) 'colours_ets22.txt' using 1:4 via amplitudeba, positionba, sigmaba, amplitudebb, positionbb, sigmabb
+#fit gaussr(x) 'colours_ets22.txt' using 1:2 via amplitudera, positionra, sigmara
+#fit gaussg(x) 'colours_ets22.txt' using 1:3 via amplitudega, positionga, sigmaga
+#fit gaussb(x) 'colours_ets22.txt' using 1:4 via amplitudeba, positionba, sigmaba
+
+
+plot [-45000:45000][0:255] gaussr(x) lt rgb "red", "colours_ets22.txt" using 1:2 lt rgb "red", \
+                                    gaussg(x) lt rgb "green", "colours_ets22.txt" using 1:3 lt rgb "green", \
+                                    gaussb(x) lt rgb "blue", "colours_ets22.txt" using 1:4 lt rgb "blue"
+
+#plot [1555900832:1.55598E+9][0:500] gaussr(x) lt rgb "red", "colours_ts22.txt" using 1:2 lt rgb "red"
+#plot [1555900832:1.55598E+9][0:500] gaussr(x) lt rgb "red"
+#1555934400.0 is midday on 22nd April 2019

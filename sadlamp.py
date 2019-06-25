@@ -1,5 +1,9 @@
-#!/bin/python
-import datetime
+#!/usr/bin/env python
+
+from datetime import datetime, date
+from time import sleep
+import unicornhat as unicorn
+#import datetime
 import unittest
 from math import sqrt, exp
 now = datetime.datetime.now()
@@ -33,12 +37,15 @@ amplitudebb     = 4.9334e+07
 positionbb      = -0.22518 
 sigmabb         = 12287.7 
 
-#print positionra, positionrb
-#print positionga, positiongb
-#print positionba, positionbb
+print("""
+        Seasonally affected disorder (SAD) lamp. Light intensity and timings based on a modelleing of very sunny day in April in the UK
+""")
 
+unicorn.set_layout(unicorn.HAT)
+unicorn.rotation(0)
+unicorn.brightness(1.0)
+width,height=unicorn.get_shape()
 
-#FIT_LIMIT = 1e-6
 def gauss(x=0):
     # Max value of the below using the paramters is 170, so normalise to 255
     # Which is the full brightness of a Unicorn Hat
@@ -48,15 +55,16 @@ def gauss(x=0):
     igaussr=int(round(gaussr,0))
     igaussg=int(round(gaussg,0))
     igaussb=int(round(gaussb,0))
-
     return igaussr, igaussg, igaussb
 
-print ("Time Now: %i" % x)
-print ("R\tG\tB")
-(r,g,b)=gauss(x)
-
-print ("%i\t%i\t%i" % (r,g,b))
-
+while True:
+    print ("Time Now: %i" % x)
+    print ("R\tG\tB")
+    (r,g,b)=gauss(x)
+    print ("%i\t%i\t%i" % (r,g,b))
+    unicorn.set_all(r, g, b)
+    unicorn.show()
+    time.sleep(60)
 
 class TestOutputs(unittest.TestCase):
 

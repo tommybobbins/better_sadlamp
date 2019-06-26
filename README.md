@@ -30,3 +30,17 @@ Sunshine colour composition 22nd-April-2019 at 53°19"N 2°01'"W. Location was c
 
 I can't explain why the data is such a poor fit to a single Gaussian curve, seasons/latitude may play a role here. As always with data, it's easier to fit the data to a model with more degrees of freedom, so I've added a second gaussian, to provide the flat tops to the data. This is not useful, but in terms of building a better sad-lamp to model the sunshine in April in the North it's fine.
 ![Non-scientifc fit](epoch_gauss_2_sine.png "Entirely unscientific fit to the data from 22nd April 2019.")
+
+## Creating a sadlamp using the fits
+
+Install the Pimoroni unicorn hat library: https://github.com/pimoroni/unicorn-hat
+Copy the sadlamp.py into /home/pi/Pimoroni/unicornhat/examples. 
+
+    cp sadlamp.py /home/pi/Pimoroni/unicornhat/examples/
+
+Append the following to the /etc/rc.local before the exit 0.
+
+    python /home/pi/Pimoroni/unicornhat/examples/sadlamp.py
+    exit 0
+
+Reboot the pi to start the service on boot. The program will log to /home/pi/sadlamp.log.

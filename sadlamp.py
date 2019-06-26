@@ -8,15 +8,13 @@ import unicornhat as unicorn
 #import datetime
 import unittest
 from math import sqrt, exp
-now = datetime.datetime.now()
-midnight = now.replace(hour=0, minute=0, second=0, microsecond=0)
-seconds = (now - midnight).seconds
-#43200 seconds till midday
-#midday_seconds=70000
-midday_seconds=43200
-#print seconds
-x = seconds - midday_seconds
-#print ("Number of seconds to (-ve) /from (+ve) midday: %i" % x )
+
+unicorn.set_layout(unicorn.HAT)
+unicorn.rotation(0)
+unicorn.brightness(1.0)
+width,height=unicorn.get_shape()
+
+
 
 pi=3.141592654
 
@@ -60,10 +58,18 @@ def gauss(x=0):
     return igaussr, igaussg, igaussb
 
 while True:
-    print ("Time Now: %i" % x)
-    print ("R\tG\tB")
+    now = datetime.datetime.now()
+    midnight = now.replace(hour=0, minute=0, second=0, microsecond=0)
+    seconds = (now - midnight).seconds
+    #43200 seconds till midday
+    midday_seconds=43200
+    x = seconds - midday_seconds
+#    print ("Number of seconds to (-ve) /from (+ve) midday: %i" % x )
+#    print ("Time Now: %i" % x)
+#    print ("R\tG\tB")
     (r,g,b)=gauss(x)
-    print ("%i\t%i\t%i" % (r,g,b))
+
+#    print ("%i\t%i\t%i" % (r,g,b))
     unicorn.set_all(r, g, b)
     unicorn.show()
     time.sleep(60)

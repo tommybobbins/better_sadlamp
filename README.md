@@ -29,6 +29,7 @@ Sunshine colour composition 22nd-April-2019 at 53°19"N 2°01'"W. Location was c
 ![Gaussian fit to RGB output](epoch_gauss.png "Gaussian fit to 22nd April 2019")
 
 I can't explain why the data is such a poor fit to a single Gaussian curve, seasons/latitude may play a role here. As always with data, it's easier to fit the data to a model with more degrees of freedom, so I've added a second gaussian, to provide the flat tops to the data. This is not useful, but in terms of building a better sad-lamp to model the sunshine in April in the North it's fine.
+![Non-scientifc fit](gauss_2_sine.png "Entirely unscientific fit to the data from 22nd April 2019.")
 ![Non-scientifc fit](epoch_gauss_2_sine.png "Entirely unscientific fit to the data from 22nd April 2019.")
 
 ## Creating a sadlamp using the fits

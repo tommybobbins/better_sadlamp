@@ -22,13 +22,13 @@ https://shop.pimoroni.com/products/raspberry-pi-zero-camera-module?variant=37751
 
 ## Results
 
-Sunshine colour composition 22nd-April-2019 at 53°19"N 2°01'"W. Location was chosen to be away from all street lights. The days were chosen as the skies were cloudless. The sunshine profile does not fit to a Guassian, but has a flat top. I've modelled this using a Gaussian with an inverted Gaussian. 
+Blue skies colour composition 22nd-April-2019 at 53°19"N 2°01'"W. Location was chosen to be away from all street lights. The days were chosen as the skies were cloudless. The blue skies profile does not fit to a Guassian, but is a plateau. I've modelled this using a Gaussian with an inverted Gaussian, for no reason other than a better fit. This is bad.
 
 ![Sunshine RGB output](sunshine.png "RGB values of sunshine over time")
 ![Sunshine RGB output](sunshine_22apr.png "RGB values of sunshine 22nd April 2019")
 ![Gaussian fit to RGB output](epoch_gauss.png "Gaussian fit to 22nd April 2019")
 
-I can't explain why the data is such a poor fit to a single Gaussian curve, seasons/latitude may play a role here. As always with data, it's easier to fit the data to a model with more degrees of freedom, so I've added a second gaussian, to provide the flat tops to the data. This is not useful, but in terms of building a better sad-lamp to model the sunshine in April in the North it's fine.
+I can't explain why the data is such a poor fit to a single Gaussian curve, seasons/latitude may play a role here. As always with data, it's easier to fit the data to a model with more degrees of freedom, so I've added a second gaussian, to provide the flat tops to the data. This is not useful, but in terms of building a better sad-lamp to model the blue skies in April in the North it's fine.
 ![Non-scientifc fit](gauss_2_sine.png "Entirely unscientific fit to the data from 22nd April 2019.")
 ![Non-scientifc fit](epoch_gauss_2_sine.png "Entirely unscientific fit to the data from 22nd April 2019.")
 
@@ -45,3 +45,7 @@ Append the following to the /etc/rc.local before the exit 0.
     exit 0
 
 Reboot the pi to start the service on boot. The program will log to /home/pi/sadlamp.log.
+
+## Still to do. 
+
+Measure the sunshine and place this over the blue skies on the sadlamp. Gimbled camera and openCV?
